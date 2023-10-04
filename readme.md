@@ -1,28 +1,84 @@
-## Apa itu block element
-`bertujuan untuk membagi halaman HTML menjadi bagian yang terpisah, atau menjadi ‘blok’. Contoh dari blok elemen ini adalah tag paragraf (<p>), list (<ol> atau <ul>), dan heading (<h1> s/d <h6>). Block element akan ditampilkan terpisah dari seluruh tag sebelum dan sesudahnya.`
+# -- DIV
 
-## Apa itu inline element
-`Berbeda dengan block level element, tag dengan tipe inline level element akan ‘menyatu’ dengan tag sebelum dan sesudahnya. Tag ini tidak akan memulai blok atau baris baru namun akan tetap berada di dalam blok tersebut. Tag inline juga tidak akan ditampilkan dengan jarak dari tag sebelum dan sesudahnya. Contoh dari tag inline ini adalah: <em>, <i>,<strong> dan <b>.`
+Div memungkinkan kita untuk mengelompokkan beberapa elemen sebagai satu kesatuan
+Fungsi utama: mengelompokkan, menjadi container (kalian punya mie, dimasukkin ke dalem tupperware)
 
-## Apa itu semantic element dan non semantic
-`Elemen semantik adalah elemen-elemen yang menyatakan makna atau tujuan dari elemen itu sendiri.`
-    <ul>
-        <li><code>&lt;article&gt;</code>&nbsp;— untuk membuat elemen artikel;</li>
-        <li><code>&lt;aside&gt;</code>&nbsp;— untuk membuat elemen bagian samping;</li>
-        <li><code>&lt;details&gt;</code>&nbsp;— untuk membuat elemen datail atau spoiler;</li>
-        <li><code>&lt;figcaption&gt;</code>&nbsp;— untuk membuat teks caption pada figure;</li>
-        <li><code>&lt;figure&gt;</code>&nbsp;— untuk membuat figur atau gambar pada artikel;</li>
-        <li><code>&lt;footer&gt;</code>&nbsp;— untuk membuat elemen bagian kaki dari web;</li>
-        <li><code>&lt;header&gt;</code>&nbsp;— untuk mebuat kepala kop dari web;</li>
-        <li><code>&lt;main&gt;</code>&nbsp;— untuk membuat elemen utama;</li>
-        <li><code>&lt;mark&gt;</code>&nbsp;— untuk menandai teks;</li>
-        <li><code>&lt;nav&gt;</code>&nbsp;— untuk membuat navigasi;</li>
-        <li><code>&lt;section&gt;</code>&nbsp;— untuk membuat bagian artikel;</li>
-        <li><code>&lt;summary&gt;</code>&nbsp;— untuk membuat ringkasan artikel atau isi spoiler;</li>
-        <li><code>&lt;time&gt;</code>&nbsp;— untuk membuat elemen yang menyatakan waktu;</li>
-        <li>dan masih banyak lagi.</li>
-    </ul>
-`non semantic: span div`
+# -- Sizing:
+Width mengatur lebar dari suatu elemen, Height mengatur tinggi dari suatu elemen
 
-## CSS
-`Css adalah singkatan dari Cascading Style Sheet yang dipergunakan untuk menentukan tampilan dan format pada sebuah website. Artinya, dengan adanya CSS bisa mengatur mulai dari font, warna tulisan dan latar belakang pada website tersebut.`
+Sizing bisa menggunakan pixel, point, pica, cm, mm, inches
+
+# -- Penjarakan
+Jarak bisa diberikan menggunakan margin dan padding
+
+margin memberikan jarak luar, sehingga dia memiliki jarak antar elemen dengan elemen lainnya
+
+padding memberikan jarak dalam, sehingga dia memiliki jarak antar border dengan elemen di dalamnya
+
+# Git Push (Step By Step)
+
+```bash
+git init #inisiasi projek agar bisa di push kedalam repository
+git remote add nama_remote https://github.com/username_kalian/repository_kalian.git #untuk menambahkan link remote baru
+git add . #untuk menambahkan semua file yang ada dalam folder kedalam commit | NOTE: (.) menandakan bahwa semua file akan ditambahkan
+git commit -m "pesan kalian" #untuk memberikan pesan ketika kita melakukan commit/push kedalam repository
+git branch -M main #untuk merubah direksi branch nya, dari yang default "master" menjadi "main"
+git push nama_remote main #melakukan push terhadap project ke dalam repository kita
+```
+
+# Git Update (Step By Step)
+
+```bash
+git add . #untuk menambahkan semua file yang ada dalam folder kedalam commit | NOTE: (.) menandakan bahwa semua file akan ditambahkan
+git commit -m "pesan kalian" #untuk memberikan pesan ketika kita melakukan commit/push kedalam repository
+git push nama_remote main #melakukan push terhadap project ke dalam repository kita
+```
+
+# Tingkatan Styling
+
+Inline Styling > id > class > element
+
+styling menggunakan id akan berbentuk seperti ini:
+
+```css
+#div {
+    background-color: #000;
+}
+```
+
+styling menggunakan class akan berbentuk seperti ini:
+
+```css
+.div {
+    background-color: #000;
+}
+```
+
+styling menggunakan element akan berbentuk seperti ini:
+
+```css
+div {
+    background-color: #000;
+}
+```
+
+align-items mengatur bagian dari vertical
+justify-content mengatur bagian dari horizontal
+
+================================================================
+
+References CDN:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+```
+
+References Link:
+
+[CSS Units](https://www.w3schools.com/css/css_units.asp)
+
+[CSS Table Border](https://www.w3schools.com/html/html_table_borders.asp)
+
+[Flexbox Cheatsheet](https://yoksel.github.io/flex-cheatsheet/)
+
+[align-center vs align-items](https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items)
